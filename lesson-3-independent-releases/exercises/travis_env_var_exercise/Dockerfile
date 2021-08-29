@@ -14,6 +14,9 @@ RUN npm install
 # Copy app source
 COPY . .
 
+ARG FAVORITE_FOOD
+ENV FAVORITE_FOOD=$FAVORITE_FOOD
+
 # Bind the port that the image will run on
 EXPOSE 8080
 
